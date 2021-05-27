@@ -8,4 +8,4 @@ export default {
 
 const Template = (args) => <DesignPatterns {...args} />;
 
-export const ToDoFlux = Template.bind({});
+export const DesignPattern = Template.bind({});
