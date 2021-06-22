@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoFlux from '../Redux/ToDoFlux/TodoFLux';
+import TodoFlux from './TodoFLux';
 
 export default {
   title: 'Redux/ToDoFlux',

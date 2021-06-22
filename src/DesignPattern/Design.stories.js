@@ -1,5 +1,5 @@
 import React from 'react';
-import DesignPatterns from '../DesignPattern/DesignPatterns';
+import DesignPatterns from './DesignPatterns';
 
 export default {
   title: 'DesignPatterns/POC',
