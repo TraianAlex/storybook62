@@ -14,8 +14,7 @@ const Main = () => {
       <Navbar dark color="primary">
         <div className="container">
           <NavbarBrand href="/" className="mx-auto">
-            {" "}
-            Card Selection Menu{" "}
+            Card Selection Menu
           </NavbarBrand>
         </div>
       </Navbar>

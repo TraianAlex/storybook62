@@ -17,22 +17,18 @@ const CardInfo = ({ card }) => {
           <h6>Name :</h6>
           <div>{card.name}</div>
         </li>
-
         <li>
           <h6>Type : </h6>
           <div>{card.type}</div>
         </li>
-
         <li>
           <h6>Attack: </h6>
           <div>{card.attack}</div>
         </li>
-
         <li>
           <h6>Damage : </h6>
           <div>{card.damage}</div>
         </li>
-
         <li>
           <h6>Description : </h6>
           <div>{card.description}</div>
