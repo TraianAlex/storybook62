@@ -7,14 +7,10 @@ import { CARDS } from "./utils";
 
 const Main = () => {
   const [selectedCard, setSelectedCard] = useState(null);
-  const [cardsFiltered, setCardsFiltered] = useState(null);
-
-  const cardSelect = (cardId) => setSelectedCard(cardId);
-
-  const cardsFilterSelect = (filterName) => setCardsFiltered(filterName);
+  const [filter, setFilter] = useState(null);
 
   return (
-    <div style={{backgroundColor: 'lightcyan'}}>
+    <div style={{ backgroundColor: "lightcyan" }}>
       <Navbar dark color="primary">
         <div className="container">
           <NavbarBrand href="/" className="mx-auto">
@@ -25,9 +21,9 @@ const Main = () => {
       </Navbar>
       <Filter
         cards={CARDS}
-        selectCard={cardSelect}
-        cardsFiltered={cardsFiltered}
-        cardsFilterSelect={cardsFilterSelect}
+        selectCard={(cardId) => setSelectedCard(cardId)}
+        filter={filter}
+        cardsFilterSelect={(filterName) => setFilter(filterName)}
       />
       <CardInfo card={CARDS.filter((card) => card.id === selectedCard)[0]} />
     </div>
