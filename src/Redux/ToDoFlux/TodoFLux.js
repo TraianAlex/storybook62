@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TodoList } from "./TodoList";
 import { connect } from "./Provider";
-import { CREATE_TODO, UPDATE_TODO } from "./store";
+import { CREATE_TODO, UPDATE_TODO, DELETE_TODO } from "./store";
 
 const TodoFlux = (props) => {
   const onChange = ({ target }) => {
@@ -14,6 +15,8 @@ const TodoFlux = (props) => {
     props.dispatch({ type: CREATE_TODO, todo: props.newTodo });
   };
 
+  const deleteTodo = (todo) => props.dispatch({ type: DELETE_TODO, todo });
+
   const { todos, newTodo } = props;
 
   return (
@@ -21,11 +24,12 @@ const TodoFlux = (props) => {
       <h3>Todo List</h3>
       <form onSubmit={addTodo}>
         <p>
-          Create todo: <span>{newTodo}</span>
+          Create Todo: <FontAwesomeIcon icon={"plus"} color="#17a2b8" />{" "}
+          <span>{newTodo}</span>
         </p>
         <input value={newTodo} onChange={onChange} />
       </form>
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} />
     </TodoContainer>
   );
 };

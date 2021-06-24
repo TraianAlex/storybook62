@@ -1,9 +1,10 @@
-export const UPDATE_TODO = 'UPDATE_TODO';
-export const CREATE_TODO = 'CREATE_TODO';
+export const UPDATE_TODO = "UPDATE_TODO";
+export const CREATE_TODO = "CREATE_TODO";
+export const DELETE_TODO = "DELETE_TODO";
 
 const initialState = {
-  newTodo: '',
-  todos: [{ title: 'Finish this project' }],
+  newTodo: "",
+  todos: [{ title: "Finish this project" }],
 };
 
 const reduce = (state, action) => {
@@ -15,8 +16,12 @@ const reduce = (state, action) => {
       };
     case CREATE_TODO:
       return {
-        newTodo: '',
+        newTodo: "",
         todos: state.todos.concat({ title: action.todo }),
+      };
+    case DELETE_TODO:
+      return {
+        todos: state.todos.filter((todo) => todo.title !== action.todo),
       };
     default:
       return state;
@@ -33,12 +38,12 @@ export const createStore = () => {
   let listeners = [];
 
   store = {
-    subscribe: listener => {
+    subscribe: (listener) => {
       listeners.push(listener);
     },
-    dispatch: action => {
+    dispatch: (action) => {
       state = reduce(state, action);
-      listeners.forEach(l => l());
+      listeners.forEach((l) => l());
       return action;
     },
     getState: () => state,
