@@ -1,22 +1,19 @@
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { getAmount, amountChanged } from './reducers/RateReducer';
+import { getAmount, changeAmount } from './reducers/RateReducer';
 
-export function AmountField() {
+export const AmountField = () => {
   const dispatch = useDispatch();
   const amount = useSelector(getAmount);
 
-  function onChange(e) {
-    let newAmount = e.target.value;
-    dispatch(amountChanged(newAmount));
-  }
+  const onChange = (e) => dispatch(changeAmount(e.target.value));
 
   return (
     <Form>
       <Input type="text" value={amount} onChange={onChange} />
     </Form>
   );
-}
+};
 
 const Form = styled.form`
   margin-left: auto;

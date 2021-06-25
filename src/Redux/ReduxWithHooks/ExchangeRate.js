@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
-import { updateCurrencyCode } from './reducers/RateReducer';
+import { changeCurrencyCode } from './reducers/RateReducer';
 import { RateTable } from './RateTable';
 import { CurrencyCodePicker } from './CurrencyCodePicker';
 import { AmountField } from './AmountField';
 
-export function ExchangeRate() {
+export const ExchangeRate = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(updateCurrencyCode());
+    dispatch(changeCurrencyCode());
   }, [dispatch]);
 
   return (

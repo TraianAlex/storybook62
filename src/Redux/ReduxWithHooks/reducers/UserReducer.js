@@ -1,7 +1,12 @@
 const initialState = {
-  name: '',
+  fullName: 'Traian Alexandru',
+  loggedIn: false,
 };
 
-export function userReducer(state = initialState, action) {
+export const userReducer = (state = initialState, action) => {
   return state;
-}
+};
+
+export const getName = (state) => {
+  return state.user.fullName.split(' ')[0];
+};

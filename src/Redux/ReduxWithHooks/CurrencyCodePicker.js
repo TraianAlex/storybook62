@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import {
-  updateCurrencyCode,
+  changeCurrencyCode,
   getCurrencyCode,
   getSupportedSymbols,
 } from './reducers/RateReducer';
 
-export function CurrencyCodePicker() {
+export const CurrencyCodePicker = () => {
   const dispatch = useDispatch();
   const currencyCode = useSelector(getCurrencyCode);
   const supportedSymbols = useSelector(getSupportedSymbols);
@@ -14,14 +14,14 @@ export function CurrencyCodePicker() {
   return (
     <Select
       value={currencyCode}
-      onChange={(e) => dispatch(updateCurrencyCode(e.target.value))}
+      onChange={(e) => dispatch(changeCurrencyCode(e.target.value))}
     >
       {supportedSymbols.map((code) => (
-        <option value={code}>{code}</option>
+        <option key={code} value={code}>{code}</option>
       ))}
     </Select>
   );
-}
+};
 
 const Select = styled.select`
   background: none;

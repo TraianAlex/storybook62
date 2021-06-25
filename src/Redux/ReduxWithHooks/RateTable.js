@@ -1,15 +1,17 @@
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { getAmount, getRates } from './reducers/RateReducer';
+import { getName } from './reducers/UserReducer';
 
-export function RateTable() {
+export const RateTable = () => {
   const amount = useSelector(getAmount);
   const rates = useSelector(getRates);
+  const name = useSelector(getName);
 
   return (
     <Table className="ExchangeRate-table">
       <tbody>
-        {Object.entries(rates).map(([code, rate]) => {
+        {Object.values(rates).map(({code, rate}) => { // 1 Object.entries(rates).map(([code, rate]) // 2 - 3 rates.map(({code, rate})
           // NOTE: normally avoid floating point math in JS
           const exchangeAmount = amount * rate || 0.0;
           return (
@@ -25,9 +27,14 @@ export function RateTable() {
           );
         })}
       </tbody>
+      <tfoot>
+        <tr>
+          <td colSpan={2}>Prepared for {name}</td>
+        </tr>
+      </tfoot>
     </Table>
   );
-}
+};
 
 const Table = styled.table`
   margin-left: auto;
