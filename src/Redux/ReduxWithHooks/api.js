@@ -1,7 +1,7 @@
 // because the API we were using stopped being free
 // we've added this mock fetch method, which supplies
 // its own exchange rate data
-import { fetch } from "./lib/fetch";
+import { fetch } from './lib/fetch';
 
 // helper to make our exchange rate API call
 export function getExchangeRates(base, supportedSymbols) {

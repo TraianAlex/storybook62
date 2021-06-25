@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { TodoList } from "./TodoList";
-import { connect } from "./Provider";
-import { CREATE_TODO, UPDATE_TODO, DELETE_TODO } from "./store";
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { TodoList } from './TodoList';
+import { connect } from './Provider';
+import { CREATE_TODO, UPDATE_TODO, DELETE_TODO } from './store';
 
 const TodoFlux = (props) => {
   const onChange = ({ target }) => {
@@ -24,7 +24,7 @@ const TodoFlux = (props) => {
       <h3>Todo List</h3>
       <form onSubmit={addTodo}>
         <p>
-          Create Todo: <FontAwesomeIcon icon={"plus"} color="#17a2b8" />{" "}
+          Create Todo: <FontAwesomeIcon icon={'plus'} color="#17a2b8" />{' '}
           <span>{newTodo}</span>
         </p>
         <input value={newTodo} onChange={onChange} />

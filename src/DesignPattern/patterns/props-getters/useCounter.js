@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 //Function which concat all functions together
 const callFnsInSequence = (...fns) => (...args) =>
@@ -18,24 +18,24 @@ function useCounter({ initial, max }) {
   //props getter for 'Counter'
   const getCounterProps = ({ ...otherProps } = {}) => ({
     value: count,
-    "aria-valuemax": max,
-    "aria-valuemin": 0,
-    "aria-valuenow": count,
-    ...otherProps
+    'aria-valuemax': max,
+    'aria-valuemin': 0,
+    'aria-valuenow': count,
+    ...otherProps,
   });
 
   //props getter for 'Decrement'
   const getDecrementProps = ({ onClick, ...otherProps } = {}) => ({
     onClick: callFnsInSequence(handleDecrement, onClick),
     disabled: count === 0,
-    ...otherProps
+    ...otherProps,
   });
 
   //props getter for 'Increment'
   const getIncrementProps = ({ onClick, ...otherProps } = {}) => ({
     onClick: callFnsInSequence(handleIncrement, onClick),
     disabled: count === max,
-    ...otherProps
+    ...otherProps,
   });
 
   return {
@@ -44,7 +44,7 @@ function useCounter({ initial, max }) {
     handleDecrement,
     getCounterProps,
     getDecrementProps,
-    getIncrementProps
+    getIncrementProps,
   };
 }
 

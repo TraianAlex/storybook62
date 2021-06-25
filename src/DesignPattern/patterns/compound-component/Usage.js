@@ -1,9 +1,9 @@
-import React from "react";
-import { Counter } from "./Counter";
+import React from 'react';
+import { Counter } from './Counter';
 
 function Usage() {
   const handleChangeCounter = (count) => {
-    console.log("count", count);
+    console.log('count', count);
   };
 
   return (

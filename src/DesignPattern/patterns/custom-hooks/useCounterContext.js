@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const CounterContext = React.createContext(undefined);
 
@@ -11,7 +11,7 @@ function CounterProvider({ children, value }) {
 function useCounterContext() {
   const context = React.useContext(CounterContext);
   if (context === undefined) {
-    throw new Error("useCounterContext must be used within a CounterProvider");
+    throw new Error('useCounterContext must be used within a CounterProvider');
   }
   return context;
 }

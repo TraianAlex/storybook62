@@ -1,5 +1,5 @@
-import React from "react";
-import { Card, CardImg } from "reactstrap";
+import React from 'react';
+import { Card, CardImg } from 'reactstrap';
 
 const CardInfo = ({ card }) => {
   const renderCard = (card) => {
@@ -39,7 +39,7 @@ const CardInfo = ({ card }) => {
 
   if (card != null) {
     return (
-      <div className="p-5" style={{backgroundColor: 'lightblue'}}>
+      <div className="p-5" style={{ backgroundColor: 'lightblue' }}>
         <div className="row">
           <div className="col-12 col-md-5 ">
             {/* <p>hi</p> */}

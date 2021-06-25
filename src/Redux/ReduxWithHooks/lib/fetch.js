@@ -1,4 +1,4 @@
-import exchangeRates from "./rates.json";
+import exchangeRates from './rates.json';
 
 // sleep helper to simulate a network call
 const sleep = (time) => new Promise((res) => setTimeout(res, time));
@@ -8,12 +8,12 @@ const sleep = (time) => new Promise((res) => setTimeout(res, time));
 // which will simulate a short delay and return
 // with exchange rates after a short period
 export async function fetch(url) {
-  const [, search = ""] = url.split("?");
+  const [, search = ''] = url.split('?');
   const params = new URLSearchParams(search);
   await sleep(400);
   // TODO: filter response by included symbols if we want to match the API
   // const symbols = new Set((params.get("symbols") || "").split(","));
-  const base = params.get("base");
+  const base = params.get('base');
   const rates = exchangeRates[base];
   return {
     // simulate the JSON method on the fetch response

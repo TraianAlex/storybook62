@@ -1,6 +1,6 @@
-import { useSelector, useDispatch } from "react-redux";
-import styled from "styled-components";
-import { getAmount, amountChanged } from "./reducers/RateReducer";
+import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
+import { getAmount, amountChanged } from './reducers/RateReducer';
 
 export function AmountField() {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const Input = styled.input`
   font-size: 2.8em;
   background: none;
   border: none;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: rgb(0 0 0 / 50%);
   text-align: center;
   max-width: 100%;

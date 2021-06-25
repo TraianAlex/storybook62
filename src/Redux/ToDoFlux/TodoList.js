@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRecycle } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRecycle } from '@fortawesome/free-solid-svg-icons';
 
 export const TodoList = ({ todos, deleteTodo }) => {
   const todoItems = todos.reverse().map((todo, i) => (

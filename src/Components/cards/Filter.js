@@ -1,6 +1,6 @@
-import React from "react";
-import { Card, CardImg, ButtonGroup, Button } from "reactstrap";
-import { FILTERS } from "./utils";
+import React from 'react';
+import { Card, CardImg, ButtonGroup, Button } from 'reactstrap';
+import { FILTERS } from './utils';
 
 const Filter = ({ cards, selectCard, filter, cardsFilterSelect }) => {
   const cardsFiltered = cards
@@ -22,7 +22,7 @@ const Filter = ({ cards, selectCard, filter, cardsFilterSelect }) => {
       <Button
         key={filterName}
         onClick={() => cardsFilterSelect(filterName)}
-        style={{ marginLeft: "inherit" }}
+        style={{ marginLeft: 'inherit' }}
       >
         {filterName}
       </Button>
@@ -37,7 +37,7 @@ const Filter = ({ cards, selectCard, filter, cardsFilterSelect }) => {
         </div>
         <div className="p-5 col-1">
           <ButtonGroup size="lg" vertical>
-            <h6 style={{ color: "blue" }}>Card Attributes</h6>
+            <h6 style={{ color: 'blue' }}>Card Attributes</h6>
             <Button onClick={() => cardsFilterSelect(null)}>All</Button>
             {filterButtons}
           </ButtonGroup>

@@ -1,10 +1,10 @@
-export const UPDATE_TODO = "UPDATE_TODO";
-export const CREATE_TODO = "CREATE_TODO";
-export const DELETE_TODO = "DELETE_TODO";
+export const UPDATE_TODO = 'UPDATE_TODO';
+export const CREATE_TODO = 'CREATE_TODO';
+export const DELETE_TODO = 'DELETE_TODO';
 
 const initialState = {
-  newTodo: "",
-  todos: [{ title: "Finish this project" }],
+  newTodo: '',
+  todos: [{ title: 'Finish this project' }],
 };
 
 const reduce = (state, action) => {
@@ -16,7 +16,7 @@ const reduce = (state, action) => {
       };
     case CREATE_TODO:
       return {
-        newTodo: "",
+        newTodo: '',
         todos: state.todos.concat({ title: action.todo }),
       };
     case DELETE_TODO:

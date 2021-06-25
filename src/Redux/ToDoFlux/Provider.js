@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { createStore } from './store';
 
-const Provider = props => {
+const Provider = (props) => {
   const [state, setState] = useState();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Provider = props => {
 const store = createStore();
 
 export const connect = (select = () => {}) => {
-  return Component => props => (
+  return (Component) => (props) => (
     <Provider store={store}>
       <Component
         {...select(store.getState(), props)}

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Counter } from "./Counter";
-import { useCounter } from "./useCounter";
+import React from 'react';
+import styled from 'styled-components';
+import { Counter } from './Counter';
+import { useCounter } from './useCounter';
 
 const MAX_COUNT = 10;
 
@@ -10,23 +10,23 @@ function Usage() {
     count,
     getCounterProps,
     getIncrementProps,
-    getDecrementProps
+    getDecrementProps,
   } = useCounter({
     initial: 0,
-    max: MAX_COUNT
+    max: MAX_COUNT,
   });
 
   const handleBtn1Clicked = () => {
-    console.log("btn 1 clicked");
+    console.log('btn 1 clicked');
   };
 
   return (
     <>
       <Counter {...getCounterProps()}>
-        <Counter.Decrement icon={"minus"} {...getDecrementProps()} />
+        <Counter.Decrement icon={'minus'} {...getDecrementProps()} />
         <Counter.Label>Counter</Counter.Label>
         <Counter.Count />
-        <Counter.Increment icon={"plus"} {...getIncrementProps()} />
+        <Counter.Increment icon={'plus'} {...getIncrementProps()} />
       </Counter>
       <StyledContainer>
         <button {...getIncrementProps({ onClick: handleBtn1Clicked })}>

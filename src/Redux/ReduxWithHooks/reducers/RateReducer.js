@@ -1,20 +1,18 @@
-import { getExchangeRates } from "../api";
+import { getExchangeRates } from '../api';
 
 const initialState = {
-  amount: "12.99",
-  currencyCode: "EUR",
-  rates: {
-    USD: 1.0,
-  },
-  supportedSymbols: ["USD", "EUR", "JPY", "CAD", "GBP", "MXN"],
+  amount: '12.99',
+  currencyCode: 'EUR',
+  rates: { USD: 1.0 },
+  supportedSymbols: ['USD', 'EUR', 'JPY', 'CAD', 'GBP', 'MXN'],
 };
 
 export function rateReducer(state = initialState, action) {
-  if (action.type === "rate/amountChanged") {
+  if (action.type === 'rate/amountChanged') {
     return { ...state, amount: action.payload };
-  } else if (action.type === "rate/currencyCodeUpdated") {
+  } else if (action.type === 'rate/currencyCodeUpdated') {
     return { ...state, currencyCode: action.payload };
-  } else if (action.type === "rate/updateRates") {
+  } else if (action.type === 'rate/updateRates') {
     return { ...state, rates: action.payload };
   }
   return state;
@@ -25,15 +23,15 @@ export function updateCurrencyCode(currencyCode = initialState.currencyCode) {
   return (dispatch, getState) => {
     const state = getState();
     const symbols = getSupportedSymbols(state);
-    dispatch({ type: "rate/currencyCodeUpdated", payload: currencyCode });
+    dispatch({ type: 'rate/currencyCodeUpdated', payload: currencyCode });
     getExchangeRates(currencyCode, symbols).then((rates) => {
-      dispatch({ type: "rate/updateRates", payload: rates });
+      dispatch({ type: 'rate/updateRates', payload: rates });
     });
   };
 }
 
 export const amountChanged = (amount) => ({
-  type: "rate/amountChanged",
+  type: 'rate/amountChanged',
   payload: amount,
 });
 

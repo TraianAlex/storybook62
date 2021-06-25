@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Counter } from "./Counter";
+import React, { useState } from 'react';
+import { Counter } from './Counter';
 
 function Usage() {
   const [count, setCount] = useState(0);
@@ -9,10 +9,10 @@ function Usage() {
   };
   return (
     <Counter value={count} onChange={handleChangeCounter}>
-      <Counter.Decrement icon={"minus"} />
+      <Counter.Decrement icon={'minus'} />
       <Counter.Label>Counter</Counter.Label>
       <Counter.Count max={10} />
-      <Counter.Increment icon={"plus"} />
+      <Counter.Increment icon={'plus'} />
     </Counter>
   );
 }

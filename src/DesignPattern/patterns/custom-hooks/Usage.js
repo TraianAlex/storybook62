@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Counter } from "./Counter";
-import { useCounter } from "./useCounter";
+import React from 'react';
+import styled from 'styled-components';
+import { Counter } from './Counter';
+import { useCounter } from './useCounter';
 
 function Usage() {
   const { count, handleIncrement, handleDecrement } = useCounter(0);
@@ -18,14 +18,14 @@ function Usage() {
     <>
       <Counter value={count}>
         <Counter.Decrement
-          icon={"minus"}
+          icon={'minus'}
           onClick={handleDecrement}
           disabled={count === 0}
         />
         <Counter.Label>Counter</Counter.Label>
         <Counter.Count />
         <Counter.Increment
-          icon={"plus"}
+          icon={'plus'}
           onClick={handleClickIncrement}
           disabled={count === MAX_COUNT}
         />

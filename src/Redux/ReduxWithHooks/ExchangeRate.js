@@ -1,10 +1,10 @@
-import { useEffect } from "react";
-import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { updateCurrencyCode } from "./reducers/RateReducer";
-import { RateTable } from "./RateTable";
-import { CurrencyCodePicker } from "./CurrencyCodePicker";
-import { AmountField } from "./AmountField";
+import { useEffect } from 'react';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { updateCurrencyCode } from './reducers/RateReducer';
+import { RateTable } from './RateTable';
+import { CurrencyCodePicker } from './CurrencyCodePicker';
+import { AmountField } from './AmountField';
 
 export function ExchangeRate() {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export function ExchangeRate() {
 
 const StyledContainer = styled.div`
   color: rgb(0 0 0 / 50%);
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   background-image: linear-gradient(
     to bottom,
     rgb(114, 114, 186),

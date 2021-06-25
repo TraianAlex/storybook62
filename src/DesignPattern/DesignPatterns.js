@@ -1,27 +1,27 @@
-import React from "react";
-import styled from "styled-components";
-import { Usage as CompoundComponent } from "./patterns/compound-component/Usage";
-import { Usage as ControlProps } from "./patterns/control-props/Usage";
-import { Usage as CustomHooks } from "./patterns/custom-hooks/Usage";
-import { Usage as PropsGetters } from "./patterns/props-getters/Usage";
-import { Usage as StateReducer } from "./patterns/state-reducer/Usage";
+import React from 'react';
+import styled from 'styled-components';
+import { Usage as CompoundComponent } from './patterns/compound-component/Usage';
+import { Usage as ControlProps } from './patterns/control-props/Usage';
+import { Usage as CustomHooks } from './patterns/custom-hooks/Usage';
+import { Usage as PropsGetters } from './patterns/props-getters/Usage';
+import { Usage as StateReducer } from './patterns/state-reducer/Usage';
 
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faPlus,
   faPlusCircle,
   faPlusSquare,
   faMinus,
   faMinusCircle,
-  faMinusSquare
-} from "@fortawesome/free-solid-svg-icons";
+  faMinusSquare,
+} from '@fortawesome/free-solid-svg-icons';
 library.add(
   faPlus,
   faPlusCircle,
   faPlusSquare,
   faMinus,
   faMinusCircle,
-  faMinusSquare
+  faMinusSquare,
 );
 
 export default function DesignPatterns() {

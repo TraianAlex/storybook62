@@ -1,9 +1,9 @@
-import React from "react";
-import { StyledButton } from "./styles.js";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useCounterContext } from "../useCounterContext";
+import React from 'react';
+import { StyledButton } from './styles.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useCounterContext } from '../useCounterContext';
 
-function Decrement({ icon = "minus" }) {
+function Decrement({ icon = 'minus' }) {
   const { handleDecrement } = useCounterContext();
   return (
     <StyledButton onClick={handleDecrement}>

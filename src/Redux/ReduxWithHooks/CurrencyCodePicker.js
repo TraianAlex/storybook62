@@ -1,10 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
-import styled from "styled-components";
+import { useSelector, useDispatch } from 'react-redux';
+import styled from 'styled-components';
 import {
   updateCurrencyCode,
   getCurrencyCode,
   getSupportedSymbols,
-} from "./reducers/RateReducer";
+} from './reducers/RateReducer';
 
 export function CurrencyCodePicker() {
   const dispatch = useDispatch();
