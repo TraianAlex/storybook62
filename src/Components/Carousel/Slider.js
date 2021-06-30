@@ -11,13 +11,9 @@ const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  const nextSlide = () => setCurrent(current === length - 1 ? 0 : current + 1);
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+  const prevSlide = () => setCurrent(current === 0 ? length - 1 : current - 1);
 
   return (
     <StyledSlider>
@@ -28,6 +24,7 @@ const Slider = ({ slides }) => {
         color="#17a2b8"
         size="3x"
         onClick={prevSlide}
+        className="m-5"
       />
       {slides.map((slide, index) => {
         return (
@@ -41,6 +38,7 @@ const Slider = ({ slides }) => {
         color="#17a2b8"
         size="3x"
         onClick={nextSlide}
+        className="m-5"
       />
     </StyledSlider>
   );
