@@ -1,33 +1,7 @@
 import styled from 'styled-components';
 import Slider from 'react-slick';
+import { images } from './data';
 import './styles.css';
-
-const images = [
-  {
-    id: '1',
-    name: 'Kitty 1',
-    alt: '',
-    url: 'images/carousel-images/carousel-custom-xcvbnm-usplash.jpg',
-  },
-  {
-    id: '2',
-    name: 'Kitty 2',
-    alt: '',
-    url: 'images/carousel-images/peter-herrmann-aT88kga0g_M-unsplash.jpg',
-  },
-  {
-    id: '3',
-    name: 'Kitty 3',
-    alt: '',
-    url: 'images/carousel-images/surface-sAsAxFPXwEg-unsplash.jpg',
-  },
-  {
-    id: '4',
-    name: 'Kitty 4',
-    alt: '',
-    url: 'images/carousel-images/xps-8pb7Hq539Zw-unsplash.jpg',
-  },
-];
 
 const settings = {
   dots: true,
