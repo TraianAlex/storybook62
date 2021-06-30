@@ -9,6 +9,7 @@ const settings = {
   speed: 1000,
   slidesToShow: 2,
   slidesToScroll: 1,
+  vertical: true,
   className: 'slides',
 };
 
