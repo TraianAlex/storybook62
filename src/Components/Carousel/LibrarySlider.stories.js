@@ -2,7 +2,7 @@ import React from 'react';
 import { CarouselLibrary } from './CarouselLibrary';
 
 export default {
-  title: 'Components/Carousel',
+  title: 'Components/Carousel/Library',
   component: CarouselLibrary,
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { CarouselCustom } from './CarouselCustom';
 
 export default {
-  title: 'Components/Carousel',
+  title: 'Components/Carousel/Custom',
   component: CarouselCustom,
 };
 
