@@ -53,8 +53,6 @@ test('Should show new thought to be present', async () => {
   expect(thought).toBeInTheDocument();
 });
 
-jest.setTimeout(17000);
-
 test('Should show Thought to be removed', async () => {
   render(<Todo />);
 
@@ -70,6 +68,6 @@ test('Should show Thought to be removed', async () => {
     },
     { timeout: 16000 },
   );
-});
+}, 17000);
 
 // SKIP_PREFLIGHT_CHECK=true yarn test
