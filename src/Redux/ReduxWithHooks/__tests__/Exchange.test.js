@@ -1,14 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { store } from '../store';
+import { render, screen } from '../test-utils';
 import { Exchange } from '../Exchange';
 
 test('renders title', () => {
-  render(
-    <Provider store={store}>
-      <Exchange />
-    </Provider>,
-  );
+  render(<Exchange />);
   const linkElement = screen.getByText(/exchange rates/i);
   expect(linkElement).toBeInTheDocument();
 });

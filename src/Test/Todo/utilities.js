@@ -1,4 +1,4 @@
-export const getNewExpirationTime = () => Date.now() + 15 * 1000;
+export const getNewExpirationTime = () => Date.now() + 10 * 1000;
 
 let nextId = 0;
 export const generateId = () => {

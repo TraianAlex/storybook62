@@ -66,8 +66,8 @@ test('Should show Thought to be removed', async () => {
       const thought = screen.queryByText('I have to call my mom.');
       expect(thought).toBeNull();
     },
-    { timeout: 16000 },
+    { timeout: 11000 },
   );
-}, 17000);
+}, 11000);
 
 // SKIP_PREFLIGHT_CHECK=true yarn test
