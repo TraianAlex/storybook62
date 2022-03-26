@@ -5,19 +5,16 @@ import { TodoList } from './TodoList';
 import { connect } from './Provider';
 import { CREATE_TODO, UPDATE_TODO, DELETE_TODO } from './store';
 
-const TodoFlux = (props) => {
-  const onChange = ({ target }) => {
-    props.dispatch({ type: UPDATE_TODO, todo: target.value });
-  };
+const TodoFlux = ({ dispatch, todos, newTodo }) => {
+  const onChange = ({ target }) =>
+    dispatch({ type: UPDATE_TODO, todo: target.value });
 
   const addTodo = (e) => {
     e.preventDefault();
-    props.dispatch({ type: CREATE_TODO, todo: props.newTodo });
+    dispatch({ type: CREATE_TODO, todo: newTodo });
   };
 
-  const deleteTodo = (todo) => props.dispatch({ type: DELETE_TODO, todo });
-
-  const { todos, newTodo } = props;
+  const deleteTodo = (todo) => dispatch({ type: DELETE_TODO, todo });
 
   return (
     <TodoContainer>
