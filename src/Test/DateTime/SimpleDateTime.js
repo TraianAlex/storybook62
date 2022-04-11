@@ -4,13 +4,7 @@ import Select from 'react-select';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
-const options = [
-  { value: 1, label: 'Today' },
-  { value: 2, label: 'Yesterday' },
-  { value: 7, label: 'Last 7 days' },
-  { value: 30, label: 'Last 30 days' },
-  { value: 180, label: 'Last 6 months' },
-];
+import { options, rowEven, rowOdd } from './DateTime';
 
 export const SimpleDateTime = () => {
   const [dateBack, setDateBack] = useState(options[3].value);
@@ -40,10 +34,10 @@ export const SimpleDateTime = () => {
       <div style={{ marginBottom: '10px' }}>DateTime simple javascript</div>
       <Select options={options} onChange={handleChange} />
       <div style={{ marginTop: '10px' }}>
-        {filterResult.map((date) => (
+        {filterResult.map((date, index) => (
           <div
             key={date.toDateString()}
-            style={{ display: 'flex', justifyContent: 'space-between' }}
+            style={index % 2 ? rowEven : rowOdd}
           >
             <div>
               <span>{date.toLocaleString('en-US', { month: 'long' })} </span>
